@@ -57,3 +57,23 @@ print(asst_mgr.name, asst_mgr.salary, asst_mgr.team_size)
 # Hybrid Inheritance
 sen_mgr = SeniorManager("David", 70000, "Finance", 20)
 print(sen_mgr.name, sen_mgr.salary, sen_mgr.department, sen_mgr.team_size)
+
+
+# Python program to demonstrate
+# calling the parent's class method
+# inside the overridden method
+class Parent:
+    def __init__(self):
+        self.value = 'Arunava'
+    def show(self):
+        print(self.value)
+
+class Child(Parent):
+    def __init__(self,name):
+        super().__init__()
+        self.name = name
+    def display(self):
+        print(self.name)
+
+obj1 = Child("ADDA")
+obj1.display()
