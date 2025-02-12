@@ -30,18 +30,19 @@ def insertion_sort(list1):
     # Outer loop to traverse on len(list1)
     for i in range(1, len(list1)):
 
-        a = list1[i]
+        a = list1[i] #-----------> 2 -------> 1------> 6
 
         # Move elements of list1[0 to i-1],
         # which are greater to one position
         # ahead of their current position
-        j = i - 1
+        j = i - 1 #----------------> 0 ----------> 1
 
-        while j >= 0 and a < list1[j]:
-            list1[j + 1] = list1[j]
-            j -= 1
+        while j >= 0 and a < list1[j]: #--------> 0 - (2 < 7) -------> 1-(1 < 7)
+            list1[j + 1] = list1[j] #------> list1[1] = list1[0] => 2 = 7 -----> list1[2] = list1[1] => 1 = 7
+            j -= 1 #---------> j = -1 -------> 0
 
-        list1[j + 1] = a
+        list1[j + 1] = a #-----------> list1[0] = 2 --------> list1[1] = 1
+        #list1 = [2, 7, 1, 6]----> [2,1,7,6]----->
 
     return list1
 
