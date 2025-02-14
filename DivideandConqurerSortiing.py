@@ -2,7 +2,6 @@ arr = [4,3,7,1,5,2]
 start = 0
 end = len(arr)-1
 
-
 def Partition(arr , start, end):
     i = start -1
     pivot = arr[end]
